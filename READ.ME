@@ -1,7 +1,31 @@
-# hive_table_monitor
+ï»¿# hive_table_monitor
 
-##1¡¢create table for  collect hive table
+##1.create table for  collect hive table
 
-##2¡¢compile code 
+   CREATE TABLE `TABLEINFO` (
+  `DATE` varchar(20) NOT NULL,
+  `DB` varchar(20) NOT NULL,
+  `TABLE_NAME` varchar(50) NOT NULL,
+  `SD_ID` varchar(50) DEFAULT NULL,
+  `TBL_TYPE` varchar(50) DEFAULT NULL,
+  `CREATE_TIME` varchar(50) DEFAULT NULL,
+  `LOCATION` varchar(100) DEFAULT NULL,
+  `SLIB` varchar(100) DEFAULT NULL,
+  `FILESIZE` varchar(50) DEFAULT NULL,
+  `WRITE_COUNT` varchar(50) DEFAULT NULL,
+  `READ_COUNT` varchar(50) DEFAULT NULL,
+  `src` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`DATE`,`DB`,`TABLE_NAME`)
+  ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
-##3¡¢submit code
+##2.compile code 
+   mvn assembly:assembly
+    
+
+
+
+##3.submit code
+   git add .
+   git -commit -m "init code"
+   git push
+   
