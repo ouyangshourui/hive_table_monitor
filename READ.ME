@@ -25,7 +25,11 @@
 
 
 ##3.submit code
-   git add .
-   git -commit -m "init code"
-   git push
+   ./spark-submit 
+   --class service.CollectHiveTableSize 
+   --master local 
+   /home/hive/wxh/HiveTableInfoCollect-1.0-SNAPSHOT-jar-with-dependencies.jar 
+   /tmp/20180822 
+   /home/hive/wxh/db.properties 
+   --jar /home/hive/wxh/mysql-connector-java-5.1.41.jar 
    
